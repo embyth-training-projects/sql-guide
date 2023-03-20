@@ -26,3 +26,7 @@ MODIFY COLUMN full_name VARCHAR(300) NOT NULL,
 -- Add CHECK constraint
 ALTER TABLE users
 ADD CONSTRAINT yearly_salary_positive CHECK (yearly_salary > 0); -- PostgreSQL and MySQL
+
+-- Add new columns (id primary key as an example)
+ALTER TABLE products ADD COLUMN id INT PRIMARY KEY AUTO_INCREMENT; -- MySQL
+ALTER TABLE products ADD COLUMN id SERIAL PRIMARY KEY; -- PostgreSQL
